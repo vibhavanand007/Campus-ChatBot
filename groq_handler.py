@@ -1,7 +1,7 @@
 import streamlit as st
 from groq import Groq
 
-client = Groq(api_key="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")
+client = Groq(api_key=st.secrets["GROQ_API_KEY"])
 
 def ask_groq(question, context="You are a helpful campus assistant."):
     try:
